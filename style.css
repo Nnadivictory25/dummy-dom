@@ -1,0 +1,199 @@
+@font-face {
+    src: url(font/DynaPuff-VariableFont_wdth\,wght.ttf);
+    font-family: dynapuff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    line-height: 24px;
+    font-weight: 400;
+}
+
+body {
+    font-family: dynapuff;
+    background: rgb(24, 19, 19);
+    color: white;
+    letter-spacing: 1px;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#bar2 {
+    text-align: center;
+    border: 3px solid white;
+    padding: 1rem .5rem;
+    margin-top: 1.5rem;
+}
+
+h1{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.check {
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* x menu */
+.order-container {
+    cursor: pointer;
+}
+
+.order-container :is(.bar1, .bar2, .bar3) {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition-duration: 0.4s;
+}
+
+.playing {
+    display: grid;
+    place-items: center;
+    border: 2px solid white;
+    width: 100%;
+    padding: 4rem;
+    margin-block: 2rem;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* hamburger menu */
+.fa-sun {
+    font-size: 5rem;
+    color: blueviolet;
+    cursor: pointer;
+    transition: 1s;
+
+}
+/* ---------------- */
+.number-dark {
+    color: gold;
+}
+/* --------------------- */
+.boxing {
+    background-color: rgb(183, 180, 180);
+    color: black;
+}
+
+.boxxy {
+    border: 2px solid white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.swi {
+    display: flex;
+    justify-content: center;
+    padding-block: 1rem;
+}
+
+.tog {
+    display: none;
+}
+
+.toggle-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color:dimgrey;
+    border-radius: 1em;
+}
+
+.toggle-switch :is(span) {
+    padding-inline: 1rem; 
+}
+
+.tog:checked + .toggle-switch {
+    font-weight: 800;
+}
+
+.toggle-switch::before {
+    content: "";
+    width: 2.4rem;
+    height: 1.6rem;
+    border-radius: 1em;
+    background-color: blueviolet;
+    align-items: center;
+    /* animation-duration: 1s; */
+}
+
+.toggle-switch::after {
+    content: "";
+    width: 1.27rem;
+    height: .75rem;
+    border-top-left-radius: 1.1em;
+    border-top-right-radius: 1.1em;
+    background-color:aliceblue;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    transform: rotateZ(-60deg);
+    transition-duration: .35s;
+}
+
+.tog:checked + .toggle-switch::after {
+    left: 18px;
+    top: 5px;
+    transform: rotateZ(60deg);
+    transition-duration: .35s;
+}
+
+.tog:checked + .toggle-switch::before {
+    background-color: black;
+}
+
+.tog:checked + .toggle-switch::after {
+    background-color: gold;
+}
+
+.ajax-p {
+    padding-block: 1.5rem;
+}
+
+.bttn {
+    padding: .5rem 1rem;
+    background: blueviolet;
+    border: none;
+    color: white;
+    font-family: dynapuff;
+    cursor: pointer;
+}
+
+.ajax-btn {
+    background-color: gold;
+    color: black;
+}
+
+.fa-album-circle-user {
+    color: blueviolet;
+}
+
+
+
+
+
+
+

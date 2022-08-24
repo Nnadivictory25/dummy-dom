@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>HTML DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <button onclick="getElementById('bar2').innerHTML=Date()">What is the time?</button>
+            <div id="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="playing">
+            <div class="order-container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </div>
+
+        <div id="box" class="boxxy">
+            <div class="swi">
+                <input type="checkbox" id="darkmode" class="tog">
+                <label for="darkmode" class="toggle-switch">
+                    <span>Dark/White Mode</span>
+                </label>
+            </div>
+            <h1 class="head">motherfucking header</h1>
+            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere inventore voluptatibus perferendis, vel a nam aut? Vero facilis, impedit debitis soluta atque quas veniam ipsam quod, possimus labore eaque quibusdam esse earum. Nam, mollitia placeat. Velit ex iure, recusandae nesciunt consectetur quisquam libero illum reprehenderit aspernatur impedit, a voluptate soluta tenetur commodi esse officia fugit hic? Repudiandae autem quasi obcaecati, tempore expedita omnis itaque earum facilis aliquid nesciunt, non blanditiis, fugiat fuga eveniet aliquam! Laudantium voluptatibus et quae voluptate? Eligendi natus aspernatur rerum ab, sapiente magni corrupti? Quidem velit, suscipit consectetur autem et aperiam cupiditate earum maxime expedita quae nostrum.</p>
+
+            <div class="ajax" id="ajax-container">
+                <h1 class="ajax-header">Jquery AJAX</h1><hr>
+                <p class="ajax-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores!</p>
+                <button id="ajax-btn" class="bttn">Manipulator</button>
+            </div>
+
+            <div>
+               <h1>Click icon</h1>
+               <i class="fa-solid fa-sun" onclick="changeIcon(this)"></i>
+            </div>
+        </div>
+
+        <ul id="undefined">
+            <li>Man city</li>
+            <li class="exempt">Arsenal</li>
+            <li class="exempt">Liverpool</li>
+            <li>Tottenham</li>
+            <li>Chelsea</li>
+        </ul>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
