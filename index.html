@@ -5,55 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>HTML DOM</title>
+    <title>HTML DOM TUTORIAL</title>
+    <link rel="shortcut icon" href="images/icons8-check-circle.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.css">
 </head>
 <body>
     <main>
-        <div class="container">
-            <button onclick="getElementById('bar2').innerHTML=Date()">What is the time?</button>
-            <div id="bar2"></div>
-            <div class="bar3"></div>
+        <div class="switching">
+            <label for="toggler">
+               <span class="word">Switch Mode</span>
+               <img src="icons/half-moon-svgrepo-com.svg" alt="" width="22px" id="night">
+            </label>
+            <ul class="iconing">
+                <li><a href="#">
+                    <img src="icons/twitter-social-media-bird-animal-svgrepo-com.svg" alt="twitter" id="twi" width="30px">
+                </a></li>
+                <li><a href="#">
+                    <img src="icons/email-letter-mail-message-envelope-email-address-svgrepo-com.svg" alt="mail" id="envelope" width="30px">
+                </a></li>
+               </ul>
         </div>
 
-        <div class="playing">
-            <div class="order-container" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-              </div>
+        <div class="dom-div">
+            <h1 class="olori">JS DOM</h1>
+            <form action="">
+                Add items <br>
+                <input type="text" class="dom-text" name="name" id="test"><br>
+                <button class="dom-btn">Submit</button>
+            </form>
+
+           <section class="poly-sci">
+               <div class="doming">
+                  <h2>Menu list</h2>
+                  <ul class="doming-ul">
+                      <li class="list-item"><a href="#">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Blog</a></li>
+                      <li class="list-item"><a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        Profile</a></li>
+                      <li class="list-item"><a href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard</a></li>
+                      <li class="list-item"><a href="#">
+                        <i class="fa-solid fa-book"></i>
+                        Course</a></li>
+                  </ul>
+               </div>
+               <div class="board">
+                   <h2>Political science</h2>
+                   <div class="chill">
+                    <p class="poly-note">Lorem, ipsum dolor sit amet consectetur adipisicing elit.    Facilis repellendus officia obcaecati rerum tenetur quod odio. Fugiat id amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus libero quisquam provide Lorem.</p>
+                    <img src="images/bubble-gum-social-media.gif" alt="" width="280px" id="baller">
+                   </div>
+               </div>
+           </section>
+
+           <article class="art">
+            <figure>
+                <img src="images/apple-watch-5201172_1280.jpg" id="imagery" alt="image of an apple watch">
+            </figure>
+
+            <button id="img-btn">Hide image</button>
+            <h2>community</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, molestias. Ab adipisci eos reprehenderit vel dolorum quam, dolor quisquam accusantium animi molestiae? Quo, veniam quidem.</p>
+           </article>
+           <ul class="numbers">
+            <li class="numb">One</li>
+            <li class="numb">Two</li>
+            <li class="numb">Three</li>
+            <li class="numb">Four</li>
+           </ul>
         </div>
-
-        <div id="box" class="boxxy">
-            <div class="swi">
-                <input type="checkbox" id="darkmode" class="tog">
-                <label for="darkmode" class="toggle-switch">
-                    <span>Dark/White Mode</span>
-                </label>
-            </div>
-            <h1 class="head">motherfucking header</h1>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere inventore voluptatibus perferendis, vel a nam aut? Vero facilis, impedit debitis soluta atque quas veniam ipsam quod, possimus labore eaque quibusdam esse earum. Nam, mollitia placeat. Velit ex iure, recusandae nesciunt consectetur quisquam libero illum reprehenderit aspernatur impedit, a voluptate soluta tenetur commodi esse officia fugit hic? Repudiandae autem quasi obcaecati, tempore expedita omnis itaque earum facilis aliquid nesciunt, non blanditiis, fugiat fuga eveniet aliquam! Laudantium voluptatibus et quae voluptate? Eligendi natus aspernatur rerum ab, sapiente magni corrupti? Quidem velit, suscipit consectetur autem et aperiam cupiditate earum maxime expedita quae nostrum.</p>
-
-            <div class="ajax" id="ajax-container">
-                <h1 class="ajax-header">Jquery AJAX</h1><hr>
-                <p class="ajax-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, asperiores!</p>
-                <button id="ajax-btn" class="bttn">Manipulator</button>
-            </div>
-
-            <div>
-               <h1>Click icon</h1>
-               <i class="fa-solid fa-sun" onclick="changeIcon(this)"></i>
-            </div>
-        </div>
-
-        <ul id="undefined">
-            <li>Man city</li>
-            <li class="exempt">Arsenal</li>
-            <li class="exempt">Liverpool</li>
-            <li>Tottenham</li>
-            <li>Chelsea</li>
-        </ul>
     </main>
     <script src="main.js"></script>
 </body>
