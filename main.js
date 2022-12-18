@@ -20,8 +20,54 @@ let imag = document.querySelector("#imagery");
 let imgBtn = document.querySelector("#img-btn");
 let soccer = document.querySelector("#baller");
 let wordly = document.querySelector(".word");
-let textInput = document.querySelector("#test")
-// console.log(items.childNodes);
+let textInput = document.querySelector("#test");
+let swiDashboard = document.querySelector(".board")
+let butn = document.querySelector(".butting");
+
+// window.addEventListener("scroll", () => {
+//     // added an event listener to the page and a scroll
+//     let changeSize = document.querySelector("#play");
+//     const currentScroll = window.pageYOffset;
+//    if (currentScroll >= 170) {
+//     changeSize.style.fontSize = "25px";
+//     changeSize.style.textAlign = "left";
+//    } else {
+//     changeSize.style.fontSize = "50px";
+//     changeSize.style.textAlign = "center";
+//    }
+//     // lastScroll = currentScroll;
+
+//     let head = document.querySelector("header");
+//     let currentScroller = window.pageYOffset;
+//     if (currentScroller >= 300) {
+//         head.classList.add('hide-header')
+//     } else {
+//         head.classList.remove('hide-header')
+//     }
+//     console.log(currentScroller);
+// })
+
+let heading = document.querySelector("header");
+// heading is equal to header
+let lastScrollY = 0;
+// last scroll is the smallest number
+window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+        // 0 will surely be less than any given pixel.
+        heading.classList.add("scroll-header");
+        // add the class
+    } else {
+        heading.classList.remove("scroll-header");
+    }
+    lastScrollY = window.scrollY;
+})
+
+// for each
+const ololade = "mmwtv";
+const asakeTracks = ["Dull", "joha", "Nzaza", "Dupe", "Muse"]; 
+asakeTracks.forEach((trackNumber, trackName, allTracks) => {
+    // console.log(allTracks);
+})
 
 
 // THIS TOGGLES THE DARKMODE AND ALSOCHANGE THE ICON
@@ -48,15 +94,10 @@ imgBtn.addEventListener('click', function(){
 })
 
 // DESIGN OF THE ITEM LIST
-let numB = document.querySelectorAll(".numb:nth-child(odd)");
-let numBr = document.querySelectorAll(".numb:nth-child(even");
-for (let b = 0; b < numB.length; b++) {
-    numB[b].style.backgroundColor = "#14213d";
-    numBr[b].style.backgroundColor = "#fca311";
-}
+
 
 //  CHANGE IMAGE ON CLICK
- soccer.addEventListener("click", function(){
+ soccer.addEventListener("mouseover", function(){
     if(soccer.src.match('images/bubble-gum-social-media.gif')) {
         soccer.src = "images/bubble-gum-workflow.gif";
     } else {
@@ -67,7 +108,6 @@ for (let b = 0; b < numB.length; b++) {
 //  TOP ICONS
 let twitter = document.querySelector("#twi");
 let mail = document.querySelector("#envelope");
-
 twitter.addEventListener("click", function(){
     if(twitter.src.match("icons/twitter-social-media-bird-animal-svgrepo-com.svg")) {
         twitter.src = "icons/instagram-social-media-photo-camera-picture-image-svgrepo-com.svg";
@@ -83,7 +123,48 @@ mail.addEventListener("click", function(){
     } else {
         mail.src = "icons/email-letter-mail-message-envelope-email-address-svgrepo-com.svg"
     }
+});
+
+
+let modalOpen = document.querySelector('#open-modal');
+let modal = document.querySelector('#modal');
+let modalClose = document.querySelector('#modal-close');
+
+modalOpen.addEventListener("click", function() {
+    modal.showModal();
 })
+
+modalClose.addEventListener("click", function() {
+    modal.close();
+})
+
+// ------------------------------
+const clickableDiv = document.querySelectorAll(".top-div");
+clickableDiv.forEach(clickableDiv => {
+    clickableDiv.addEventListener("click", () => {
+        const bottom = document.querySelectorAll('.bottom-p');
+       for (q = 0; q < bottom.length; q++) {
+        console.log(bottom[q]);
+           bottom[q].classList.toggle("hideShow")
+       }
+    })
+})
+
+const screen = window.scrollY;
+console.log(screen);
+
+
+
+
+
+// let ent = document.querySelector(".enter");
+// ent.addEventListener("click", () => {
+//     let answer = document.getElementById("mailer").value;
+//     // document.getElementsByClassName("info").innerHTML = answer;
+//     console.log(answer);
+// })
+
+
 // function show() {
 //     let hide = document.querySelector(".poly-note")
 //     if (hide.style.display === "none") {
