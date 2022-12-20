@@ -7,7 +7,6 @@
     padding: 0;
     list-style-type: none;
     text-decoration: none;
-    /* transition: 1s; */
 }
 
 body {
@@ -16,7 +15,6 @@ body {
     background-color: #242423;
     color: white;
     font-family: dynapuff;
-    transition: .5s;
 }
 
 .header {
@@ -121,7 +119,7 @@ input[type="text"].dom-text {
 }
 
 .dom-btn {
-    background-color: blueviolet;
+    background-color: #fca311;
     color: #e5e5e5;
     border: none;
     padding: .3rem 1rem;
@@ -149,13 +147,14 @@ input[type="text"].dom-text {
 }
 
 .doming :is(a):hover {
-    background-color: blueviolet;
+    background-color: #fca311;
     color: white; 
 }
 
 .board {
     background-color: #495057;
     border-radius: 3px;
+    padding-top: 1rem;
 }
 
 .poly-sci {
@@ -189,7 +188,7 @@ input[type="text"].dom-text {
 
 .open-modal, .close-modal {
     display: inline-block;
-    background-color: blueviolet;
+    background-color: #fca311;
     color: #e5e5e5;
     border: none;
     padding: .8rem 1rem;
@@ -360,10 +359,78 @@ figure {
     transition: box-shadow ease-in-out 400ms;
 }
 
+.burg-btn1 {
+    position: relative;
+    border: 1px solid white;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+}
 
+.burg-btn1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    left: 5px;
+    border: 1px solid #fca311;
+    background-color: #fca311;
+    z-index: -1;
+    transition: 400ms ease-in-out;
+}
+
+.burg-btn1:hover::after {
+    top: 0px;
+    left: 0px;
+}
+
+.effect-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.effect-cont h2 {
+    margin-block: 10px;
+}
+
+.effect-cont p {
+    margin-block: 5px;
+}
 
 .burg-btn:hover {
     box-shadow: none;
+}
+
+.dey-play {
+    margin-block: 3rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.effect-cont {
+    padding-block: 1rem;
+    position: absolute;
+    padding: 10px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, -100%);
+    background-color: rgba(0,0,0, .5);
+    width: 100%;
+    transition: 400ms ease-in-out;
+}
+
+.effect:hover .effect-cont {
+    transform: translate(0);
 }
 
 @media screen and (max-width: 800px) {
