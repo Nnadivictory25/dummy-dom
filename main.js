@@ -139,6 +139,7 @@ modalClose.addEventListener("click", function() {
     modal.close();
 })
 
+<<<<<<< HEAD
 // --------------DO WHILE------------
 let result = '';
 let i = 0;
@@ -214,6 +215,14 @@ openBtn.forEach(function(button) {
         bottom.forEach((bottomElements) => {
             bottomElements.classList.toggle('hideShow')
         })
+=======
+// ------------------------------
+const clickableDiv = document.querySelectorAll(".top-div");
+clickableDiv.forEach(clickableDiv => {
+    clickableDiv.addEventListener("click", (e) => {
+       const bottom = e.target.nextElementSibling;
+       bottom.classList.toggle("hideShow")
+>>>>>>> 48005a3328c301131bdfb789689c80662010dc4e
     })
 })
 
