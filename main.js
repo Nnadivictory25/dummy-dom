@@ -55,6 +55,7 @@ window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY) {
         // 0 will surely be less than any given pixel.
         heading.classList.add("scroll-header");
+        // console.log(lastScrollY);
         // add the class
     } else {
         heading.classList.remove("scroll-header");
@@ -138,21 +139,153 @@ modalClose.addEventListener("click", function() {
     modal.close();
 })
 
-// ------------------------------
-const clickableDiv = document.querySelectorAll(".top-div");
-clickableDiv.forEach(clickableDiv => {
-    clickableDiv.addEventListener("click", () => {
-        const bottom = document.querySelectorAll('.bottom-p');
-       for (q = 0; q < bottom.length; q++) {
-        console.log(bottom[q]);
-           bottom[q].classList.toggle("hideShow")
-       }
+// --------------DO WHILE------------
+let result = '';
+let i = 0;
+
+do {
+    i += 1;
+    // i used to be 0 but now it is 1
+    result = result + i;
+    // result was undefine but now it is I which is 1
+    // 
+} while (i < 5);
+// now the condition.if its true it runs the code
+console.log("we the best " + result);
+
+var cupsOfSugarNeeded = 3;
+var cupsAdded = 0;
+do {
+    cupsAdded++
+  //   this is the code that keeps repeating till the condition is met
+    console.log(cupsAdded);
+  //   if (cupsAdded >= 2) {
+  //     break
+  //   }
+  } while (cupsAdded < cupsOfSugarNeeded);
+  console.log(cupsAdded);
+//   -------------------
+
+
+//   -------------------------
+  var years = 0;
+  var language = 4;
+  do {
+    // years += 0;
+    years++;
+    console.log(`My experience from year ${years}`);
+  } while (years < language);
+  console.log(`my year ${years} was the litest tho`);
+
+
+let airplaneMode = () => {
+    console.log("please, do not disturb this user");
+}
+
+airplaneMode()
+
+const busyAsFuck = airplaneMode;
+busyAsFuck()
+
+let sleeping = busyAsFuck;
+sleeping()
+console.log(sleeping.name.length);
+
+// JQUERY CODES------------------
+// $noConflict();
+// $(document).ready(function(){
+//     $('.top-div').click(function(){
+//         $(".bottom-p").toggle(100)
+//     });
+// });
+
+// $(document).ready(function(){
+//     $('.top-div').click(function(){
+//         $(this).find('.arrow').toggleClass('rotate-arrow');
+//         $(this).next().toggle(500);
+//     })
+// })
+
+// Vanilla-----------------
+let openBtn = document.querySelectorAll('.top-div');
+openBtn.forEach(function(button) {
+    button.addEventListener("click", () => {
+        let bottom = document.querySelectorAll('.bottom-p');
+        bottom.forEach((bottomElements) => {
+            bottomElements.classList.toggle('hideShow')
+        })
     })
 })
 
-const screen = window.scrollY;
-console.log(screen);
 
+$(document).ready(function(){
+    $('.show-more').click(function(){
+        $(this).find('.dots').toggle()
+        $(this).text('Read less');
+        $(this).prev()
+        .toggle(200)
+    })
+})
+
+
+//   EXAMPLE
+const staffsDetails = [
+    { name: "Jam Josh", age: 44, salary: 4000, currency: "USD" },
+    { name: "Justina Kap", age: 34, salary: 3000, currency: "USD" },
+    { name: "Chris Colt", age: 37, salary: 3700, currency: "USD" },
+    { name: "Jane Doe", age: 24, salary: 4200, currency: "USD" }
+  ];
+
+  let totalSalary = 0;
+  staffsDetails.forEach(({name, salary, age}) =>{
+    if (salary != 4000) {
+        // totalSalary += salary;
+    }
+    console.log(name);
+  })
+
+//   const amountOfPhones = [23, 34, 24];
+//   amountOfPhones.forEach((amountOfPhone) => {
+//     let iye = 0;
+//     iye += amountOfPhone;
+//     console.log(iye);
+//   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $(document).ready(function(){
+//     $('.show-more').click(function(){
+//         $(this).text("Show Less")
+//         $('.more').toggle();
+//         $('.dots').toggle()
+//     })
+// })
+
+// // ---------------------
+// $(document).ready(function(){
+//     $('.addUp').click(function(){
+//         $('ul').append('<li class="ordered">Diaz</li>')
+//     })
+// })
+
+// $(document).ready(function(){
+//     $('.addUp').click(function(){
+//         $('.foden').remove()
+//     })
+// })
 
 
 
@@ -275,4 +408,4 @@ console.log(screen);
 // // add the text variable to the new div
 // newDiv.appendChild(newTxt);
 
-// console.log(newDiv);
+// console.log(newDiv)
