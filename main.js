@@ -143,7 +143,7 @@ const clickableDiv = document.querySelectorAll(".top-div");
 clickableDiv.forEach((clickableDiv) => {
   clickableDiv.addEventListener("click", (e) => {
     const bottom = e.target.nextElementSibling;
-    let img = e.target.lastElementChild;
+    const img = e.target.lastElementChild;
     img.classList.toggle('rotate')
     bottom.classList.toggle("hideShow");
   });
