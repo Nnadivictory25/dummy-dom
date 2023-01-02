@@ -141,12 +141,9 @@ modalClose.addEventListener("click", function() {
 // ------------------------------
 const clickableDiv = document.querySelectorAll(".top-div");
 clickableDiv.forEach(clickableDiv => {
-    clickableDiv.addEventListener("click", () => {
-        const bottom = document.querySelectorAll('.bottom-p');
-       for (q = 0; q < bottom.length; q++) {
-        console.log(bottom[q]);
-           bottom[q].classList.toggle("hideShow")
-       }
+    clickableDiv.addEventListener("click", (e) => {
+       const bottom = e.target.nextElementSibling;
+       bottom.classList.toggle("hideShow")
     })
 })
 
