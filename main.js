@@ -139,6 +139,10 @@ modalClose.addEventListener("click", function() {
     modal.close();
 })
 
+
+
+=======
+
 // --------------DO WHILE------------
 let result = '';
 let i = 0;
@@ -193,6 +197,15 @@ console.log(sleeping.name.length);
 
 // Vanilla-----------------
 const clickableDiv = document.querySelectorAll(".top-div");
+clickableDiv.forEach((clickableDiv) => {
+  clickableDiv.addEventListener("click", (e) => {
+    const bottom = e.target.nextElementSibling;
+    const img = e.target.lastElementChild;
+    img.classList.toggle('rotate')
+    bottom.classList.toggle("hideShow");
+  });
+});
+=======
 clickableDiv.forEach(clickableDiv => {
     clickableDiv.addEventListener("click", (e) => {
        const bottom = e.target.nextElementSibling;
