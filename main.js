@@ -140,6 +140,9 @@ modalClose.addEventListener("click", function() {
 })
 
 
+
+=======
+
 // --------------DO WHILE------------
 let result = '';
 let i = 0;
@@ -192,31 +195,7 @@ let sleeping = busyAsFuck;
 sleeping()
 console.log(sleeping.name.length);
 
-// JQUERY CODES------------------
-// $noConflict();
-// $(document).ready(function(){
-//     $('.top-div').click(function(){
-//         $(".bottom-p").toggle(100)
-//     });
-// });
-
-// $(document).ready(function(){
-//     $('.top-div').click(function(){
-//         $(this).find('.arrow').toggleClass('rotate-arrow');
-//         $(this).next().toggle(500);
-//     })
-// })
-
 // Vanilla-----------------
-let openBtn = document.querySelectorAll('.top-div');
-openBtn.forEach(function(button) {
-    button.addEventListener("click", () => {
-        let bottom = document.querySelectorAll('.bottom-p');
-        bottom.forEach((bottomElements) => {
-            bottomElements.classList.toggle('hideShow')
-        })
-=======
-// ------------------------------
 const clickableDiv = document.querySelectorAll(".top-div");
 clickableDiv.forEach((clickableDiv) => {
   clickableDiv.addEventListener("click", (e) => {
@@ -233,14 +212,19 @@ clickableDiv.forEach(clickableDiv => {
        bottom.classList.toggle("hideShow")
     })
 })
+// line 195. top div is added to a variable
+// line 196. looping through all top-divs with with the forEach
+// line 197. adding an event listener to all top div but with an e parameter
+// line 198. declare a variable for the bottom div using the nextElementSibling and a parameter to iterate through
+// line 199. toggle class
 
 
-$(document).ready(function(){
-    $('.show-more').click(function(){
-        $(this).find('.dots').toggle()
-        $(this).text('Read less');
-        $(this).prev()
-        .toggle(200)
+const moreLess = document.querySelectorAll('.show-more');
+moreLess.forEach(moreLess => {
+    moreLess.addEventListener('click', (i) => {
+        const moreView = i.target.previousElementSibling;
+        moreView.classList.toggle('more-display')
+        moreLess.textContent = "read less"
     })
 })
 
@@ -261,27 +245,39 @@ const staffsDetails = [
     console.log(name);
   })
 
+//   MAP
+ const paidFees = [300, 378, 275, 274, 287, 854];
+ const doubleFee = paidFees.map(paidFee => {
+    return paidFee * 2;
+ })
+ console.log(doubleFee);
+
+//  ------------------------------
+const stringsAndNumbers = ['Airpod', 15, 90, 'Iphone', 54, 'Dress'];
+const numbers = stringsAndNumbers.filter(number => {
+    return typeof number === 'number';
+})
+console.log(numbers)
+const strings = stringsAndNumbers.filter(string => {
+    return typeof string === 'string'
+})
+console.log(strings);
+
+// .FILTER()
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+const smallNumbers = randomNumbers.filter(smallNumber => {
+  return smallNumber < 250;
+})
+console.log(randomNumbers);
+console.log(smallNumbers);
+
+
 //   const amountOfPhones = [23, 34, 24];
 //   amountOfPhones.forEach((amountOfPhone) => {
 //     let iye = 0;
 //     iye += amountOfPhone;
 //     console.log(iye);
 //   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // $(document).ready(function(){
 //     $('.show-more').click(function(){

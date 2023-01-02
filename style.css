@@ -465,6 +465,10 @@ figure {
     display: none;
 }
 
+.more-display {
+    display: block;
+}
+
 .flexing {
     margin-block: 2.5rem;
     display: flex;
