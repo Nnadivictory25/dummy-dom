@@ -280,6 +280,12 @@ figure {
     justify-content: space-between;
     align-items: center;
     padding: .7rem 1rem;
+    transition: 400ms;
+}
+
+.rotate-arrow {
+    transform: rotate(-180deg);
+    transition: 400ms;
 }
 
 .top-div img.rotate {
@@ -359,9 +365,13 @@ figure {
     padding: 10px 15px;
     display: inline-block;
     margin-top: 10px;
-    box-shadow:  5px 5px #fca311;
-    transition: box-shadow ease-in-out 400ms;
+    transition: box-shadow ease-in-out 200ms;
 }
+
+.burg-btn:hover {
+    box-shadow:  5px 5px #fca311;
+}
+
 
 .burg-btn1 {
     position: relative;
@@ -370,6 +380,11 @@ figure {
     padding: 10px 15px;
     display: inline-block;
     margin-top: 10px;
+    transition: 400ms ease-in-out;
+}
+
+.burg-btn1:hover::after {
+    opacity: 1;
 }
 
 .burg-btn1::after {
@@ -383,11 +398,7 @@ figure {
     background-color: #fca311;
     z-index: -1;
     transition: 400ms ease-in-out;
-}
-
-.burg-btn1:hover::after {
-    top: 0px;
-    left: 0px;
+    opacity: 0;
 }
 
 .effect-img img {
@@ -404,9 +415,7 @@ figure {
     margin-block: 5px;
 }
 
-.burg-btn:hover {
-    box-shadow: none;
-}
+
 
 .dey-play {
     margin-block: 3rem;
@@ -421,20 +430,56 @@ figure {
 }
 
 .effect-cont {
-    padding-block: 1rem;
     position: absolute;
     padding: 10px;
     height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     transform: translate(0, -100%);
     background-color: rgba(0,0,0, .5);
-    width: 100%;
     transition: 400ms ease-in-out;
 }
 
 .effect:hover .effect-cont {
     transform: translate(0);
+}
+
+.content-wrap:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.demo {
+    width: 50%;
+    padding-block: 2rem;
+}
+
+.ordered {
+    margin-block: 1rem;
+    border: #fca311 1px solid;
+    padding: .5rem;
+    transform: skew(10deg, 0);
+}
+
+.more {
+    display: none;
+}
+
+.flexing {
+    margin-block: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.xing {
+    background-image: url(images/blob-haikei.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem;
+    flex-grow: 1;
+    text-align: center;
 }
 
 @media screen and (max-width: 800px) {

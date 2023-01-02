@@ -8,6 +8,7 @@
     <title>HTML DOM TUTORIAL</title>
     <link rel="shortcut icon" href="images/icons8-check-circle.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
 </head>
 <body>
     <header class="header">
@@ -39,7 +40,7 @@
         </div>
            <section class="poly-sci">
                <div class="doming">
-                  <h2>Menu list</h2>
+                  <h2 title="menu">Menu list</h2>
                   <ul class="doming-ul">
                       <li class="list-item"><a href="#">
                         <i class="fa-solid fa-paper-plane"></i>
@@ -56,7 +57,7 @@
                   </ul>
                </div>
                <div class="board">
-                   <h2>Political science</h2>
+                   <h2 contenteditable="true">Political science</h2>
                    <div class="chill">
                     <p class="poly-note">Lorem, ipsum dolor sit amet consectetur adipisicing elit.    Facilis repellendus officia obcaecati rerum tenetur quod odio. Fugiat id amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus libero quisquam provide Lorem.
                     </p>
@@ -93,32 +94,32 @@
 
            <h1 class="ex">Users experience</h1>
            <section class="how-to">
-                <div class="top-div">
+                <div class="top-div" id="oneTop" data-target="bottomOne">
                     <h3>how to</h3>
-                    <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow">
+                    <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow" class="arrow">
                 </div>
-                <p class="bottom-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
+                <p class="bottom-p" id="bottom1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
            </section>
            <section class="how-to">
-              <div class="top-div">
+              <div class="top-div" id="twoTop">
                   <h3>how to</h3>
-                  <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow">
+                  <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow" class="arrow" id="rotate-arrow">
               </div>
-              <p class="bottom-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
+              <p class="bottom-p" id="bottom2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
          </section>
          <section class="how-to">
               <div class="top-div">
                   <h3>how to</h3>
-                  <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow">
+                  <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow" class="arrow">
               </div>
-              <p class="bottom-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
+              <p class="bottom-p" id="bottom3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
          </section>
          <section class="how-to">
-              <div class="top-div">
+              <div class="top-div" data-target="bottomFour">
                   <h3>how to</h3>
-                  <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow">
+                  <img src="icons/down-arrow-svgrepo-com.svg" width="20px" alt="down arrow" class="arrow">
               </div>
-              <p class="bottom-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
+              <p class="bottom-p" id="bottom4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti magni dignissimos, pariatur rem quia blanditiis velit quas necessitatibus harum vel enim unde porro id, quasi quidem rerum fuga cumque.</p>
          </section>
 
          <section class="overlap">
@@ -169,6 +170,36 @@
                 </div>
             </div>
          </section>
+
+         <section>
+            <div class="content-wrap">
+                <h1>More and Less</h1>
+                <p class="content-read">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni itaque a excepturi illum tempora aliquid, nesciunt quos. Voluptate veniam adipisci distinctio ex excepturi quasi, cupiditate voluptatem odit dicta eveniet ad ducimus quas, praesentium quo nam rerum </p><span class="more">qui quae rem in itaque! Veritatis quos adipisci excepturi vitae officiis perferendis sint culpa minima placeat facere earum in beatae ipsum repellendus molestiae quibusdam sapiente ipsa nesciunt voluptas tempora est, ea consequuntur ad. Porro a expedita quia, aspernatur ex placeat iure dolore natus possimus repellendus excepturi amet consequuntur, soluta exercitationem totam nobis voluptate? Quo minima pariatur sed unde delectus ipsam quos eveniet rerum! Quis!</span>
+                <a href="#myLink" class="show-more">Read More</a>
+            </div>
+
+            <div class="content-wrap">
+                <h1>More and Less</h1>
+                <p class="content-read">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni itaque a excepturi illum tempora aliquid, nesciunt quos. Voluptate veniam adipisci distinctio ex excepturi quasi, cupiditate voluptatem odit dicta eveniet ad ducimus quas, praesentium quo nam rerum </p><span>class="more">qui quae rem in itaque! Veritatis quos adipisci excepturi vitae officiis perferendis sint culpa minima placeat facere earum in beatae ipsum repellendus molestiae quibusdam sapiente ipsa nesciunt voluptas tempora est, ea consequuntur ad. Porro a expedita quia, aspernatur ex placeat iure dolore natus possimus repellendus excepturi amet consequuntur, soluta exercitationem totam nobis voluptate? Quo minima pariatur sed unde delectus ipsam quos eveniet rerum! Quis!</span>
+                <a href="#myLink" class="show-more">Read More</a>
+            </div>
+
+            <div class="content-wrap">
+                <h1>More and Less</h1>
+                <p class="content-read">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni itaque a excepturi illum tempora aliquid, nesciunt quos. Voluptate veniam adipisci distinctio ex excepturi quasi, cupiditate voluptatem odit dicta eveniet ad ducimus quas, praesentium quo nam rerum </p><span class="more">qui quae rem in itaque! Veritatis quos adipisci excepturi vitae officiis perferendis sint culpa minima placeat facere earum in beatae ipsum repellendus molestiae quibusdam sapiente ipsa nesciunt voluptas tempora est, ea consequuntur ad. Porro a expedita quia, aspernatur ex placeat iure dolore natus possimus repellendus excepturi amet consequuntur, soluta exercitationem totam nobis voluptate? Quo minima pariatur sed unde delectus ipsam quos eveniet rerum! Quis!</span>
+                <a href="#myLink" class="show-more">Read More</a>
+            </div>
+         </section>
+
+         <section class="flexing">
+            <div class="xing flex-1">One</div>
+            <div class="xing flex-2">Two</div>
+            <div class="xing flex-3">Three</div>
+            <div class="xing flex-4">Four</div>
+            <div class="xing flex-5">Five</div>
+         </section>
+
+        
     </main>
     <script src="main.js"></script>
 </body>
